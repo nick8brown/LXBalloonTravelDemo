@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LXProfileBGView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileBGView.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5bN-YI-z42">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="oKZ-8m-e70"/>
+                    </constraints>
+                </imageView>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWj-FG-9pC" userLabel="遮盖">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="bdb-sc-MQ3"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-Ms-oJe" userLabel="头像" customClass="LXTabBarButton">
+                    <rect key="frame" x="155" y="64" width="65" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="ZBp-vz-FfI"/>
+                        <constraint firstAttribute="width" constant="65" id="ed8-dh-ejE"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="avatar_default_small"/>
+                    <connections>
+                        <action selector="iconBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z5O-7g-4y7"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKw-hV-k4P" userLabel="昵称">
+                    <rect key="frame" x="112" y="137" width="150" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="R8B-1B-hB8"/>
+                        <constraint firstAttribute="width" constant="150" id="y3c-GC-Z7i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDl-0h-PNX" userLabel="关注" customClass="LXTabBarButton">
+                    <rect key="frame" x="117" y="165" width="60" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="0q4-M5-VHQ"/>
+                        <constraint firstAttribute="height" constant="20" id="xno-Kq-PTA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="followingsBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="DMt-gC-z1h"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-We-NYx" userLabel="线">
+                    <rect key="frame" x="187" y="169" width="1" height="12"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="oda-lJ-7jL"/>
+                        <constraint firstAttribute="height" constant="12" id="qKz-Ui-Epr"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxD-d5-Xvo" userLabel="粉丝" customClass="LXTabBarButton">
+                    <rect key="frame" x="198" y="165" width="60" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Uh0-Dl-v4o"/>
+                        <constraint firstAttribute="height" constant="20" id="gjx-hB-pAW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="followersBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Hy-vh-oam"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-cC-B5G" userLabel="切换按钮">
+                    <rect key="frame" x="0.0" y="200" width="375" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnM-zh-NOH" userLabel="线">
+                            <rect key="frame" x="187" y="0.0" width="1" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Rma-yy-FIT"/>
+                                <constraint firstAttribute="width" constant="1" id="fTm-7Q-oWn"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-XS-Kzb" userLabel="大图" customClass="LXTabBarButton">
+                            <rect key="frame" x="147" y="12" width="20" height="20"/>
+                            <state key="normal" image="bigPhoto_normal"/>
+                            <connections>
+                                <action selector="bigPhotoBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vHI-ib-Kuf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BL-8E-ziM" userLabel="时间列表" customClass="LXTabBarButton">
+                            <rect key="frame" x="208" y="12" width="20" height="20"/>
+                            <state key="normal" image="timeList_normal"/>
+                            <connections>
+                                <action selector="timeListBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Psh-vx-mIs"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8k-B8-ked" userLabel="地图" customClass="LXTabBarButton">
+                            <rect key="frame" x="268" y="12" width="20" height="20"/>
+                            <state key="normal" image="location_normal"/>
+                            <connections>
+                                <action selector="locationBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="ndi-ml-R54"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anx-Zt-ciT" userLabel="九宫格" customClass="LXTabBarButton">
+                            <rect key="frame" x="87" y="12" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Ym4-TH-fXU"/>
+                                <constraint firstAttribute="width" constant="20" id="gJO-mW-y03"/>
+                            </constraints>
+                            <state key="normal" image="sudoku_normal"/>
+                            <connections>
+                                <action selector="sudokuBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="DhJ-th-J7N"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="5BL-8E-ziM" firstAttribute="height" secondItem="anx-Zt-ciT" secondAttribute="height" id="01h-Pc-GRp"/>
+                        <constraint firstItem="CnM-zh-NOH" firstAttribute="centerX" secondItem="Ek1-cC-B5G" secondAttribute="centerX" id="2FX-g3-xA2"/>
+                        <constraint firstItem="s8k-B8-ked" firstAttribute="height" secondItem="anx-Zt-ciT" secondAttribute="height" id="8jk-5p-o1G"/>
+                        <constraint firstItem="CnM-zh-NOH" firstAttribute="top" secondItem="Ek1-cC-B5G" secondAttribute="top" id="9E9-tu-nfA"/>
+                        <constraint firstItem="Pca-XS-Kzb" firstAttribute="leading" secondItem="anx-Zt-ciT" secondAttribute="trailing" constant="40" id="BrD-dH-CHm"/>
+                        <constraint firstItem="s8k-B8-ked" firstAttribute="leading" secondItem="5BL-8E-ziM" secondAttribute="trailing" constant="40" id="EyJ-BX-BK9"/>
+                        <constraint firstAttribute="height" constant="44" id="GlQ-M4-DVL"/>
+                        <constraint firstItem="s8k-B8-ked" firstAttribute="width" secondItem="anx-Zt-ciT" secondAttribute="width" id="I5k-3i-GpE"/>
+                        <constraint firstItem="Pca-XS-Kzb" firstAttribute="width" secondItem="anx-Zt-ciT" secondAttribute="width" id="NYQ-HV-hR1"/>
+                        <constraint firstItem="5BL-8E-ziM" firstAttribute="centerY" secondItem="Ek1-cC-B5G" secondAttribute="centerY" id="OoU-1n-0EQ"/>
+                        <constraint firstItem="5BL-8E-ziM" firstAttribute="width" secondItem="anx-Zt-ciT" secondAttribute="width" id="UVo-4o-G7b"/>
+                        <constraint firstItem="s8k-B8-ked" firstAttribute="centerY" secondItem="Ek1-cC-B5G" secondAttribute="centerY" id="YlV-yJ-l0q"/>
+                        <constraint firstItem="CnM-zh-NOH" firstAttribute="leading" secondItem="Pca-XS-Kzb" secondAttribute="trailing" constant="20" id="jPJ-bk-Xgo"/>
+                        <constraint firstItem="Pca-XS-Kzb" firstAttribute="centerY" secondItem="Ek1-cC-B5G" secondAttribute="centerY" id="jvi-H6-Xqc"/>
+                        <constraint firstItem="5BL-8E-ziM" firstAttribute="leading" secondItem="CnM-zh-NOH" secondAttribute="trailing" constant="20" id="mIs-Gq-hsz"/>
+                        <constraint firstItem="Pca-XS-Kzb" firstAttribute="height" secondItem="anx-Zt-ciT" secondAttribute="height" id="umc-IJ-b2K"/>
+                        <constraint firstItem="anx-Zt-ciT" firstAttribute="centerY" secondItem="Ek1-cC-B5G" secondAttribute="centerY" id="wiL-Zl-DOI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ek1-cC-B5G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6no-Xr-1Px"/>
+                <constraint firstItem="ON9-Ms-oJe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="6pw-sG-vvm"/>
+                <constraint firstItem="ON9-Ms-oJe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="765-Ff-shq"/>
+                <constraint firstItem="cbs-We-NYx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="169" id="COw-sJ-ndu"/>
+                <constraint firstAttribute="trailing" secondItem="Ek1-cC-B5G" secondAttribute="trailing" id="Ef9-Jq-Zag"/>
+                <constraint firstItem="5bN-YI-z42" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JHz-Ac-1CI"/>
+                <constraint firstAttribute="trailing" secondItem="RWj-FG-9pC" secondAttribute="trailing" id="O6R-Ui-K6z"/>
+                <constraint firstItem="cbs-We-NYx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QO5-up-KzW"/>
+                <constraint firstItem="KDl-0h-PNX" firstAttribute="top" secondItem="uKw-hV-k4P" secondAttribute="bottom" constant="8" id="bRT-i6-IiA"/>
+                <constraint firstItem="uKw-hV-k4P" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ew9-6r-20f"/>
+                <constraint firstAttribute="trailing" secondItem="5bN-YI-z42" secondAttribute="trailing" id="gVU-oC-fYy"/>
+                <constraint firstItem="RWj-FG-9pC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mef-8L-kpm"/>
+                <constraint firstItem="RWj-FG-9pC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mmc-CV-vR1"/>
+                <constraint firstItem="uKw-hV-k4P" firstAttribute="top" secondItem="ON9-Ms-oJe" secondAttribute="bottom" constant="8" id="n8N-Xi-8Je"/>
+                <constraint firstItem="5bN-YI-z42" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nUX-mD-ufK"/>
+                <constraint firstItem="vxD-d5-Xvo" firstAttribute="top" secondItem="uKw-hV-k4P" secondAttribute="bottom" constant="8" id="plU-3s-fNb"/>
+                <constraint firstItem="cbs-We-NYx" firstAttribute="leading" secondItem="KDl-0h-PNX" secondAttribute="trailing" constant="10" id="tkT-kS-Fjm"/>
+                <constraint firstItem="vxD-d5-Xvo" firstAttribute="leading" secondItem="cbs-We-NYx" secondAttribute="trailing" constant="10" id="uLp-qq-Eb0"/>
+                <constraint firstAttribute="bottom" secondItem="Ek1-cC-B5G" secondAttribute="bottom" id="xsy-LP-zOY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgImgView" destination="5bN-YI-z42" id="6gl-Ah-bt9"/>
+                <outlet property="btnView" destination="Ek1-cC-B5G" id="42t-Hf-xNc"/>
+                <outlet property="followersBtn" destination="vxD-d5-Xvo" id="l1m-96-Lef"/>
+                <outlet property="followingsBtn" destination="KDl-0h-PNX" id="kVh-6N-ATc"/>
+                <outlet property="iconBtn" destination="ON9-Ms-oJe" id="s4S-UX-4TX"/>
+                <outlet property="nameLabel" destination="uKw-hV-k4P" id="3YQ-GQ-mUR"/>
+            </connections>
+            <point key="canvasLocation" x="444.5" y="451"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ProfileBGView.jpg" width="375" height="200"/>
+        <image name="avatar_default_small" width="34" height="34"/>
+        <image name="bigPhoto_normal" width="36" height="36"/>
+        <image name="location_normal" width="36" height="36"/>
+        <image name="sudoku_normal" width="36" height="36"/>
+        <image name="timeList_normal" width="36" height="36"/>
+    </resources>
+</document>

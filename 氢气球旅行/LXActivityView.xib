@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZW9-Nk-Gf9" customClass="LXActivityView">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fez-uy-Feh">
+                    <rect key="frame" x="4" y="4" width="52" height="52"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Fez-uy-Feh" firstAttribute="leading" secondItem="ZW9-Nk-Gf9" secondAttribute="leading" constant="4" id="9j8-BS-WDg"/>
+                <constraint firstItem="Fez-uy-Feh" firstAttribute="top" secondItem="ZW9-Nk-Gf9" secondAttribute="top" constant="4" id="KLm-oh-tQH"/>
+                <constraint firstAttribute="trailing" secondItem="Fez-uy-Feh" secondAttribute="trailing" constant="4" id="KOJ-ME-IRz"/>
+                <constraint firstAttribute="bottom" secondItem="Fez-uy-Feh" secondAttribute="bottom" constant="4" id="slm-k0-1km"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentImgView" destination="Fez-uy-Feh" id="NBk-oD-A9c"/>
+            </connections>
+            <point key="canvasLocation" x="708" y="421"/>
+        </view>
+    </objects>
+</document>

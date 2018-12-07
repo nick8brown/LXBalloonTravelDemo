@@ -1,0 +1,169 @@
+//
+//  LXPrefixHeader.pch
+//  氢气球旅行
+//
+//  Created by 曾令轩 on 15/12/24.
+//  Copyright © 2015年 曾令轩. All rights reserved.
+//
+
+#ifndef LXPrefixHeader_pch
+#define LXPrefixHeader_pch
+
+#define iPhone5s ([UIScreen mainScreen].bounds.size.width == 320)
+#define iPhone6s ([UIScreen mainScreen].bounds.size.width == 375)
+#define iPhone6sPlus ([UIScreen mainScreen].bounds.size.width == 414)
+#define mainThemeColor [UIColor colorWithRed:67/255.0 green:160/255.0 blue:163/255.0 alpha:1]
+#define bgColor [UIColor colorWithRed:230/255.0 green:236/255.0 blue:236/255.0 alpha:1]
+#define separateLineColor [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1]
+#define screen_WIDTH [UIScreen mainScreen].bounds.size.width
+#define screen_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define statusBarH 20
+#define navigationBarH 64
+#define toolbarH 44
+#define tabBarH 49
+#define minimumSpacing 10
+#define isPhoneNumberNil ([self.phoneNumberTextField.text isEqualToString:@""])
+#define isPasswordNil ([self.passwordTextField.text isEqualToString:@""])
+#define isVerifyNumberNil ([self.verifyNumberTextField.text isEqualToString:@""])
+#define isPhoneNumber (self.phoneNumberTextField.text.length == 11)
+#define login_status @"isLogin"
+#define photo_placeholder @"photo_placeholder"
+/*----------------------------------------游记----------------------------------------*/
+#define topicTableHeaderView_HEIGHT 176
+#define travelSectionHeaderView_HEIGHT navigationBarH
+#define travelSectionFooterView_HEIGHT navigationBarH
+// LXTopicItemFrame
+#define ItemSpacing_Text 2*minimumSpacing
+#define ItemFont_Title [UIFont systemFontOfSize:18]
+#define ItemFont_Desc [UIFont systemFontOfSize:16]
+// LXTravelActivityFrame
+#define ActivitySpacing_Content 0.3*minimumSpacing
+#define ActivitySpacing_Text 1.5*minimumSpacing
+#define ActivityFont_Topic [UIFont systemFontOfSize:18]
+#define ActivityFont_Desc [UIFont systemFontOfSize:16]
+#define ActivityFont_Unfold ActivityFont_Desc
+#define ActivityFont_Mark [UIFont systemFontOfSize:15]
+// KEY
+#define likes_count_KEY [NSString stringWithFormat:@"isLikes_countBtnClick_%ld", self.section]
+#define favorites_count_KEY [NSString stringWithFormat:@"isFavorites_countBtnClick_%ld", self.section]
+// ID
+#define TopicItemCell_ID @"LXTopicItemCell"
+#define TravelActivityCell_ID @"LXTravelActivityCell"
+// IMG
+#define likes_count_normal_IMG @"likes_count_normal"
+#define likes_count_selected_IMG @"likes_count_selected"
+#define favorites_count_normal_IMG @"favorites_count_normal"
+#define favorites_count_selected_IMG @"favorites_count_selected"
+// URL
+#define Topic_URL @"http://q.chanyouji.com/api/v1/adverts.json"
+#define Topic_iOS_URL @"http://q.chanyouji.com/api/v1/albums/target_id.json"
+#define TravelStatus_URL @"http://q.chanyouji.com/api/v1/timelines.json?interests=134%2C117%2C122%2C147%2C151%2C143&page=1&per=50"
+/*----------------------------------------发现----------------------------------------*/
+#define historyTableHeaderView_HEIGHT toolbarH
+#define discoverSectionHeaderView_HEIGHT 35
+#define touristView_WIDTH 100
+#define touristView_HEIGHT 120
+#define touristScrollView_HEIGHT touristView_HEIGHT+minimumSpacing
+#define PopDestinationCell_ROW 5
+#define PopDestinationCell_HEIGHT 160
+#define numberOfItemsInRow 3
+#define wannaGoSectionHeaderView_HEIGHT discoverSectionHeaderView_HEIGHT
+#define WannaGoDestinationCell_HEIGHT 100
+#define WannaGoUserCell_HEIGHT 45
+#define inspirationSectionHeaderView_HEIGHT 60
+#define inspirationSectionFooterView_HEIGHT 1
+// LXWannaGoUserActivityCell
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self
+#define UserActivitySpacing_Content 0.8*minimumSpacing
+#define UserActivitySpacing_Text 1.5*minimumSpacing
+#define UserActivityFont_By [UIFont systemFontOfSize:14]
+#define UserActivityFont_User [UIFont systemFontOfSize:15]
+#define UserActivityFont_Topic [UIFont systemFontOfSize:18]
+#define UserActivityFont_Desc [UIFont systemFontOfSize:16]
+#define UserActivityFont_Unfold UserActivityFont_Desc
+// LXInspirationActivityFrame
+#define InspirationSpacing_Text 1.5*minimumSpacing
+#define InspirationFont_Introduce [UIFont systemFontOfSize:16]
+#define InspirationFont_Detail InspirationFont_Introduce
+#define contentImgView_HEIGHT 220
+#define detailView_HEIGHT 40
+#define detailBtn_WIDTH 100
+// TAG
+#define PopDestinationCell_Cover_TAG 100
+#define PopDestinationCell_Name_TAG 101
+#define PopDestinationCell_Name_en_TAG 102
+// ID
+#define RecommendTouristCell_ID @"LXRecommendTouristCell"
+#define PopDestinationCell_ID @"LXPopDestinationCell"
+#define WannaGoDestinationCell_ID @"LXWannaGoDestinationCell"
+#define WannaGoUserActivityCell_ID @"LXWannaGoUserActivityCell"
+#define WannaGoUserCell_ID @"LXWannaGoUserCell"
+#define TopicDestinationCell_ID @"LXTopicDestinationCell"
+#define InspirationActivityCell_ID @"LXInspirationActivityCell"
+// URL
+#define RecommendTourist_URL @"http://q.chanyouji.com/api/v1/search/featured.json"
+#define PopDestination_URL @"http://q.chanyouji.com/api/v1/search.json?q=ID&search_type=destination"
+#define TopicDestination_URL @"http://q.chanyouji.com/api/v1/activity_collections.json?destination_id=ID"
+#define InspirationActivityPage_URL @"http://q.chanyouji.com/api/v2/activity_collections/ID.json"
+/*----------------------------------------写游记----------------------------------------*/
+#define ContentCell_HEIGHT 350
+#define DescCell_HEIGHT 168
+// TAG
+#define Date_TAG 100
+#define Place_TAG 101
+#define Mark_TAG 102
+// ID
+#define ContentCell_ID @"LXContentCell"
+#define DescCell_ID @"LXDescCell"
+/*----------------------------------------心愿单----------------------------------------*/
+/*----------------------------------------我的----------------------------------------*/
+#define ProfileBGView_HEIGHT 244
+#define ProfileBGView_edgeInset_TOP ProfileBGView_HEIGHT
+#define ProfileBGView_iconBtn_WIDTH self.iconBtn.frame.size.width
+#define ProfileBGView_iconImg_WIDTH 3*ProfileBGView_iconBtn_WIDTH
+#define ProfileBGView_iconImg_HEIGHT ProfileBGView_iconImg_WIDTH
+#define maximum_numberOfRowsInSection 3
+#define activitySectionHeaderView_HEIGHT 60
+#define activitySectionFooterView_HEIGHT 30
+#define activitySectionFooterView_Unfold_HEIGHT 80
+#define TimeListActivityCell_HEIGHT 110
+#define activityDescSectionHeaderView_HEIGHT 25
+#define activityDescSectionFooterView_HEIGHT 0.5*minimumSpacing
+#define ActivityDescCell_HEIGHT 221
+#define numberOfItemsInRow_iPhone5s 3
+#define numberOfItemsInRow_iPhone6s 4
+#define numberOfItemsInRow_iPhone6sPlus numberOfItemsInRow_iPhone6s
+#define minimumInteritemSpacing_iPhone5s 1
+#define minimumInteritemSpacing_iPhone6s 0.5*minimumSpacing
+#define minimumInteritemSpacing_iPhone6sPlus 0.8*minimumSpacing
+// NSNotificationCenter
+#define BTN_CLICK @"BTN CLICK"
+#define sender_tag @"sender_tag"
+// TAG
+#define Sudoku_TAG 100
+#define BigPhoto_TAG 101
+#define TimeList_TAG 102
+#define Location_TAG 103
+#define DistrictLabel_TAG 100
+#define CloseBtn_TAG 101
+// ID
+#define UserProfile_ID @27569
+//#define UserProfile_ID @18296
+#define TimeListActivityCell_ID @"LXTimeListActivityCell"
+#define ActivityAnnotationView_ID @"LXActivityAnnotationView"
+#define ActivityDescCell_ID @"LXActivityDescCell"
+#define SudokuActivityTableViewCell_ID @"LXSudokuActivityTableViewCell"
+#define SudokuActivityCollectionViewCell_ID @"LXSudokuActivityCollectionViewCell"
+// IMG
+#define sudoku_normal_IMG @"sudoku_normal"
+#define suduku_selected_IMG @"suduku_selected"
+#define bigPhoto_normal_IMG @"bigPhoto_normal"
+#define bigPhoto_selected_IMG @"bigPhoto_selected"
+#define timeList_normal_IMG @"timeList_normal"
+#define timeList_selected_IMG @"timeList_selected"
+#define location_normal_IMG @"location_normal"
+// URL
+#define UserProfile_URL @"http://q.chanyouji.com/api/v1/users/ID/profiles.json"
+#define UserActivity_URL @"http://q.chanyouji.com/api/v1/users/ID/user_activities.json?grouped=1"
+
+#endif /* LXPrefixHeader_pch */
